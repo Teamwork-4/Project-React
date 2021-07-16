@@ -1,40 +1,52 @@
-import logo from './logo.svg';
+import React from "react";
+import {Link, Route, Switch} from "react-router-dom"
+import Daypass from "./components/Daypass.jsx"
+import Login from "./components/Login.jsx"
 
+const Home = () => (
 
-function App() {
+  <div>
+    <h2>Home</h2>
+  </div>
+
+);
+
+export default function App() {
   return (
+
+
+
     <div className="App">
 
-<head>
-<title>Hello, world!</title>
-</head>
-<body>
-  
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
+      <form class="container-fluid justify-content-start">
+        <button class="btn btn-sm btn-outline-success me-2 active" type="button">Viajeros</button>
+        <button class="btn btn-sm btn-outline-secondary" type="button">Aliados</button>
+      </form>
 
+        <span class="navbar-text">
+          <h2>Pasadías</h2>
+        </span>
 
+      </nav>
+      <nav class="menu">
+          <a href="document.getElementById('selector').removeClass('rojo')"><Link to="/">Home</Link></a>
+          <a href="document.getElementById('selector').removeClass('start');"><Link to="/daypass">Pasadías</Link></a>
+          <a href="document.getElementById('selector').className = 'start-blog'"><Link to="/login">Login</Link></a>
+    
+          <div id="selector" class="animation start-home"></div>
+      </nav>
 
-      </header>
+        <Switch>
 
+          <Route exact path="/"> <Home/></Route>
+          <Route path="/daypass"> <Daypass/></Route>
+          <Route path="/login"> <Login/></Route>
 
-
-      </body>
-      
+        </Switch>
+     
     </div>
   );
 }
 
-export default App;

@@ -16,35 +16,7 @@ const Home = () => {
     <title>Hello, world!</title>
   </head>
   <body>
-    {/* <h1>Hello, world!</h1> */}
-
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-    {/* <a class="navbar-brand" href="#"><h2>Title</h2></a> */}
-      <form class="container-fluid justify-content-start">
-        <button class="btn btn-sm btn-outline-success me-2 active" type="button">Viajeros</button>
-        <button class="btn btn-sm btn-outline-secondary" type="button">Aliados</button>
-      </form>
-      <span class="navbar-text">
-        <h2>Texto</h2>
-      </span>
-   
-    </nav>
-
- 
-
-    <nav class="menu">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Blog</a>
-      <a href="#">Portefolio</a>
-      <a href="#">Contact</a>
-      <div class="animation start-home"></div>
-    </nav>
-
-
-    <nav class="navbar fixed-bottom navbar-light bg-light">
+       <nav class="navbar fixed-bottom navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Design by: Team 4</a>
       </div>

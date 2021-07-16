@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {BrowserRouter} from "react-router-dom";
-// import App from './components/Home.jsx';
+import {BrowserRouter} from "react-router-dom"
+import App from './App.jsx';
 import reportWebVitals from './reportWebVitals';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
-import Home from './components/Home.jsx';
+// import Home from './components/Home.jsx';
 
 ReactDOM.render(
   // <React.StrictMode>
@@ -15,7 +15,7 @@ ReactDOM.render(
   // document.getElementById('root')
 
   <BrowserRouter>
-  <Home/>
+  <App/>
   </BrowserRouter>,
   document.getElementById("root")
 );

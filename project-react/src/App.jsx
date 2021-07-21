@@ -1,21 +1,15 @@
-import React from "react";
+import React, {Fragment, useState} from "react";
 import {Link, Route, Switch} from "react-router-dom"
 import Daypass from "./components/Daypass.jsx"
 import Login from "./components/Login.jsx"
-
-const Home = () => (
-
-  <div>
-    <h2>Home</h2>
-  </div>
-
-);
+import Home from "./components/Home.jsx"
 
 export default function App() {
+
+  var [clase, setClase] = useState("animation start-home")
   return (
 
-
-
+<Fragment>
     <div className="App">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -30,12 +24,15 @@ export default function App() {
         </span>
 
       </nav>
+
       <nav class="menu">
-          <a href="document.getElementById('selector').removeClass('rojo')"><Link to="/">Home</Link></a>
-          <a href="document.getElementById('selector').removeClass('start');"><Link to="/daypass">Pasadías</Link></a>
-          <a href="document.getElementById('selector').className = 'start-blog'"><Link to="/login">Login</Link></a>
+
+          <a onClick={() => setClase(clase = "animation start-home")} href="."><Link to="/">Home</Link></a>
+          <a onClick={() => setClase(clase = "animation start-about")} href="."><Link to="/daypass">Pasadías</Link></a>
+          <a onClick={() => setClase(clase = "animation start-blog") } href="."><Link to="/login">Login</Link></a>
     
-          <div id="selector" class="animation start-home"></div>
+      <div id="selector" class={clase}></div>
+          
       </nav>
 
         <Switch>
@@ -46,7 +43,15 @@ export default function App() {
 
         </Switch>
      
+        <nav class="navbar fixed-bottom navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Diseñado por: Equipo 4</a>
+          </div>
+        </nav>
     </div>
+    </Fragment>
   );
 }
+
+
 

@@ -101,3 +101,12 @@ p {
 span {
     color: #2BD6B4;
 }
+
+
+.ancho{
+	width:"600px";
+}
+
+.carousel-item img {
+	border-radius:"10px";
+}
